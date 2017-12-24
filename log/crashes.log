@@ -1,0 +1,85 @@
+2017-12-17 15:54:43 - error: [manager\index.js]  ReferenceError: axios is not defined
+    at getTickers (C:\Projects\cryoteka\summons\manager\index.js:5:21)
+    at Object.<anonymous> (C:\Projects\cryoteka\summons\manager\index.js:12:1)
+    at Module._compile (module.js:641:30)
+    at Object.Module._extensions..js (module.js:652:10)
+    at Module.load (module.js:560:32)
+    at tryModuleLoad (module.js:503:12)
+    at Function.Module._load (module.js:495:3)
+    at Module.require (module.js:585:17)
+    at require (internal/module.js:11:18)
+    at global.summon (C:\Projects\cryoteka\interop.js:2:12)
+    at Object.<anonymous> (C:\Projects\cryoteka\app.js:45:17)
+    at Module._compile (module.js:641:30)
+    at Object.Module._extensions..js (module.js:652:10)
+    at Module.load (module.js:560:32)
+    at tryModuleLoad (module.js:503:12)
+    at Function.Module._load (module.js:495:3)
+    at Function.Module.runMain (module.js:682:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:613:3
+2017-12-17 15:54:50 - error: [manager\index.js]  ReferenceError: axios is not defined
+    at getTickers (C:\Projects\cryoteka\summons\manager\index.js:5:21)
+    at Object.<anonymous> (C:\Projects\cryoteka\summons\manager\index.js:12:1)
+    at Module._compile (module.js:641:30)
+    at Object.Module._extensions..js (module.js:652:10)
+    at Module.load (module.js:560:32)
+    at tryModuleLoad (module.js:503:12)
+    at Function.Module._load (module.js:495:3)
+    at Module.require (module.js:585:17)
+    at require (internal/module.js:11:18)
+    at global.summon (C:\Projects\cryoteka\interop.js:2:12)
+    at Object.<anonymous> (C:\Projects\cryoteka\app.js:45:17)
+    at Module._compile (module.js:641:30)
+    at Object.Module._extensions..js (module.js:652:10)
+    at Module.load (module.js:560:32)
+    at tryModuleLoad (module.js:503:12)
+    at Function.Module._load (module.js:495:3)
+    at Function.Module.runMain (module.js:682:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:613:3
+2017-12-17 19:00:00 - error: [manager\index.js]  TypeError: Cannot read property 'value' of null
+    at getTickers (C:\Projects\cryoteka\summons\manager\index.js:36:32)
+    at <anonymous>
+2017-12-17 19:05:00 - error: [manager\index.js]  TypeError: Cannot read property 'value' of null
+    at getTickers (C:\Projects\cryoteka\summons\manager\index.js:36:32)
+    at <anonymous>
+2017-12-17 19:10:00 - error: [manager\index.js]  TypeError: Cannot read property 'value' of null
+    at getTickers (C:\Projects\cryoteka\summons\manager\index.js:36:32)
+    at <anonymous>
+2017-12-17 19:11:58 - error: [manager\index.js]  TypeError: Cannot read property 'value' of null
+    at getTickers (C:\Projects\cryoteka\summons\manager\index.js:36:32)
+    at <anonymous>
+2017-12-17 19:12:05 - error: [manager\index.js]  TypeError: Cannot read property 'value' of null
+    at getTickers (C:\Projects\cryoteka\summons\manager\index.js:37:32)
+    at <anonymous>
+2017-12-17 19:12:42 - error: [manager\index.js]  TypeError: Cannot read property 'value' of null
+    at getTickers (C:\Projects\cryoteka\summons\manager\index.js:37:32)
+    at <anonymous>
+2017-12-17 19:55:14 - error: [manager\index.js]  Error: getaddrinfo ENOTFOUND api.exmo.com api.exmo.com:443
+    at errnoException (dns.js:55:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:97:26)
+2017-12-17 20:00:14 - error: [manager\index.js]  Error: getaddrinfo ENOTFOUND api.exmo.com api.exmo.com:443
+    at errnoException (dns.js:55:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:97:26)
+2017-12-17 20:35:14 - error: [manager\index.js]  Error: getaddrinfo ENOTFOUND api.exmo.com api.exmo.com:443
+    at errnoException (dns.js:55:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:97:26)
+2017-12-17 20:40:14 - error: [manager\index.js]  Error: getaddrinfo ENOTFOUND api.exmo.com api.exmo.com:443
+    at errnoException (dns.js:55:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:97:26)
+2017-12-17 20:50:00 - error: [manager\index.js]  ReferenceError: k is not defined
+    at updateFiat (C:\Projects\cryoteka\summons\manager\index.js:52:27)
+    at <anonymous>
+2017-12-17 20:55:00 - error: [manager\index.js]  ReferenceError: k is not defined
+    at updateFiat (C:\Projects\cryoteka\summons\manager\index.js:52:27)
+    at <anonymous>
+2017-12-17 20:55:14 - error: [manager\index.js]  Error: getaddrinfo ENOTFOUND api.exmo.com api.exmo.com:443
+    at errnoException (dns.js:55:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:97:26)
+2017-12-17 21:00:00 - error: [manager\index.js]  ReferenceError: k is not defined
+    at updateFiat (C:\Projects\cryoteka\summons\manager\index.js:52:27)
+    at <anonymous>
+2017-12-17 21:05:47 - error: [manager\index.js]  ReferenceError: k is not defined
+    at updateFiat (C:\Projects\cryoteka\summons\manager\index.js:52:27)
+    at <anonymous>

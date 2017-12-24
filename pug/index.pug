@@ -1,0 +1,226 @@
+extends layout
+block content
+  .row
+    .col-lg-5
+      h1 Балансы
+      br
+      table.form-group
+        tr
+          th
+          th
+          th
+          th(width=50) 1 д.
+          th(width=50) 2 д.
+          th(width=50) Нед.
+          th(width=50) 2 нед.
+          th(width=50) Месяц
+        each balance in balances
+          tr
+            td(width=100 style='font-size:20px')
+              strong #{balance.name}
+            td(width=150 style='font-size:20px')
+              span.text-primary #{balance.value}
+            td(width=170 style='font-size:20px')
+              span.text-success=(balance.rate ? balance.value * balance.rate : balance.value).toFixed(2) + ' RUB'
+            if (balance.day !== null)
+              if (balance.day)
+                td.text-success(width=50)
+                  span(style='font-size:12px') +#{balance.dayp.toFixed(2)}%
+              else
+                td.text-danger(width=50)
+                  span(style='font-size:12px') -#{balance.dayp.toFixed(2)}%
+            else
+              td
+            if (balance.days2 !== null)
+              if (balance.days2)
+                td.text-success(width=50)
+                  span(style='font-size:12px') +#{balance.days2p.toFixed(2)}%
+              else
+                td.text-danger(width=50)
+                  span(style='font-size:12px') -#{balance.days2p.toFixed(2)}%
+            else
+              td
+            if (balance.wk !== null)
+              if (balance.wk)
+                td.text-success(width=50)
+                  span(style='font-size:12px') +#{balance.wk.toFixed(2)}%
+              else
+                td.text-danger(width=50)
+                  span(style='font-size:12px') -#{balance.wk.toFixed(2)}%
+            else
+              td
+            if (balance.wks2 !== null)
+              if (balance.wks2)
+                td.text-success(width=50)
+                  span(style='font-size:12px') +#{balance.wks2.toFixed(2)}%
+              else
+                td.text-danger(width=50)
+                  span(style='font-size:12px') -#{balance.wks2.toFixed(2)}%
+            else
+              td
+            if (balance.mnth !== null)
+              if (balance.mnth)
+                td.text-success(width=50)
+                  span(style='font-size:12px') +#{balance.mnth.toFixed(2)}%
+              else
+                td.text-danger(width=50)
+                  span(style='font-size:12px') -#{balance.mnth.toFixed(2)}%
+            else
+              td
+      table
+        td(style='font-size:20px' width=200)
+          strong Общий:
+        td
+          strong(style='font-size:25px').text-primary #{total} RUB
+    .col-lg-7
+      h1 Тренды
+      br
+      table(style='margin-left:10px;font-weight:bold')
+        tr
+          th(width=90)
+          th(width=80) 3 часа
+          th(width=80) 6 часов
+          th(width=80) 12 часов
+          th(width=80) День
+          th(width=80) 2 Дня
+          th(width=80) 3 Дня
+          th(width=80) 5 Days
+          th(width=80) Неделя
+          th(width=80) 2 Недели
+          th(width=80) Месяц
+          th(width=80) 2 Месяца
+        each trend in trends
+          tr
+            td(style='font-size:20px') #{trend.name}
+            if (trend.hrs3 !== null)
+              if (trend.hrs3)
+                td.text-success(style='font-size:20px') ↗
+                  span(style='font-size:12px') +#{trend.hrs3p.toFixed(2)}%
+              else
+                td.text-danger(style='font-size:20px') ↘
+                  span(style='font-size:12px') -#{trend.hrs3p.toFixed(2)}%
+            else
+              td
+            if (trend.hrs6 !== null)
+              if (trend.hrs6)
+                td.text-success(style='font-size:20px') ↗
+                  span(style='font-size:12px') +#{trend.hrs6p.toFixed(2)}%
+              else
+                td.text-danger(style='font-size:20px') ↘
+                  span(style='font-size:12px') -#{trend.hrs6p.toFixed(2)}%
+            else
+              td
+            if (trend.hrs12 !== null)
+              if (trend.hrs12)
+                td.text-success(style='font-size:20px') ↗
+                  span(style='font-size:12px') +#{trend.hrs12p.toFixed(2)}%
+              else
+                td.text-danger(style='font-size:20px') ↘
+                  span(style='font-size:12px') -#{trend.hrs12p.toFixed(2)}%
+            else
+              td
+            if (trend.day !== null)
+              if (trend.day)
+                td.text-success(style='font-size:20px') ↗
+                  span(style='font-size:12px') +#{trend.dayp.toFixed(2)}%
+              else
+                td.text-danger(style='font-size:20px') ↘
+                  span(style='font-size:12px') -#{trend.dayp.toFixed(2)}%
+            else
+              td
+            if (trend.days2 !== null)
+              if (trend.days2)
+                td.text-success(style='font-size:20px') ↗
+                  span(style='font-size:12px') +#{trend.days2p.toFixed(2)}%
+              else
+                td.text-danger(style='font-size:20px') ↘
+                  span(style='font-size:12px') -#{trend.days2p.toFixed(2)}%
+            else
+              td
+            if (trend.days3 !== null)
+              if (trend.days3)
+                td.text-success(style='font-size:20px') ↗
+                  span(style='font-size:12px') +#{trend.days3p.toFixed(2)}%
+              else
+                td.text-danger(style='font-size:20px') ↘
+                  span(style='font-size:12px') -#{trend.days3p.toFixed(2)}%
+            else
+              td
+            if (trend.days5 !== null)
+              if (trend.days5)
+                td.text-success(style='font-size:20px') ↗
+                  span(style='font-size:12px') +#{trend.days5p.toFixed(2)}%
+              else
+                td.text-danger(style='font-size:20px') ↘
+                  span(style='font-size:12px') -#{trend.days5p.toFixed(2)}%
+            else
+              td
+            if (trend.wk !== null)
+              if (trend.wk)
+                td.text-success(style='font-size:20px') ↗
+                  span(style='font-size:12px') +#{trend.wkp.toFixed(2)}%
+              else
+                td.text-danger(style='font-size:20px') ↘
+                  span(style='font-size:12px') -#{trend.wkp.toFixed(2)}%
+            else
+              td
+            if (trend.wks2 !== null)
+              if (trend.wks2)
+                td.text-success(style='font-size:20px') ↗
+                  span(style='font-size:12px') +#{trend.wks2p.toFixed(2)}%
+              else
+                td.text-danger(style='font-size:20px') ↘
+                  span(style='font-size:12px') -#{trend.wks2p.toFixed(2)}%
+            else
+              td
+            if (trend.mnth !== null)
+              if (trend.mnth)
+                td.text-success(style='font-size:20px') ↗
+                  span(style='font-size:12px') +#{trend.mnthp.toFixed(2)}%
+              else
+                td.text-danger(style='font-size:20px') ↘
+                  span(style='font-size:12px') -#{trend.mnthp.toFixed(2)}%
+            else
+              td
+            if (trend.mnths2 !== null)
+              if (trend.mnths2)
+                td.text-success(style='font-size:20px') ↗
+                  span(style='font-size:12px') +#{trend.mnths2p.toFixed(2)}%
+              else
+                td.text-danger(style='font-size:20px') ↘
+                  span(style='font-size:12px') -#{trend.mnths2p.toFixed(2)}%
+            else
+              td
+  h1(style='display:inline') Графики за 
+  select#chart-range
+    option(value='day') Сутки
+    option(value='week') Неделя
+    option(value='2weeks') 2 Недели
+    option(value='month') Месяц
+    option(value='2months') 2 Месяца
+  canvas#chart-balances(data-balances=balances.map(x => x.name).join(',') height=70)
+  each chart in balances.map(x => x.name)
+    canvas(id=chart height=50)
+  .row
+    .col-lg-6
+      h1 Добавить
+      form(method='post' action='/add')
+        .form-group
+          label Метка
+          input.form-control(name='name' required)
+        .form-group
+          label Значение
+          input.form-control(name='value' required)
+        input.form-control.btn.btn-success(type='submit' value='Добавить')
+    .col-lg-6
+      h1 Обновить
+      form(method='post' action='/update')
+        .form-group
+          label Метка
+          select.form-control(name='name')
+            each balance in balances
+              option(value=balance.name) #{balance.name}
+        .form-group
+          label Значение
+          input.form-control(name='value' required)
+        input.form-control.btn.btn-primary(type='submit' value='Обновить')
