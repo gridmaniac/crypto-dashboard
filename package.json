@@ -20,7 +20,7 @@
     "koa-router": "^7.3.0",
     "koa-static": "^4.0.2",
     "moment": "^2.19.4",
-    "mongoose": "^4.13.7",
+    "mongoose": "^4.13.21",
     "node-schedule": "^1.2.5",
     "winston": "^2.4.0"
   }
